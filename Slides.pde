@@ -1,0 +1,360 @@
+int slidenumber = 0;
+int counter;
+String[] storytext = {
+  "Stabler and Benson investigate the murder and castration of a New York City cab driver. They discover that the victim assumed the identity of another man years before because he was wanted by police. In the end, Stabler discovers that the stolen identity of the man in question was also stolen, and he and Benson have to begin the investigation all over again. That night, as he unsuccessfully tries to sleep, Stabler begins to hear a strange noise. A deep drumming, two beats. It seems like it’s coming from his basement. When he investigates the basement, it sounds like it’s coming from outside.", 
+  "Emily couldn’t bear getting dressed alone anymore. The solitary donning of shoes broke her heart. The unlocked front door, through which any neighbor could wander, would have been an afterthought, but there was no thought, after.", 
+  "Two underage models are attacked while walking home from a club. They are raped and murdered. To add insult to injury, they are confused with two other raped and murdered underage models, who coincidentally are their respective twins, and both pairs are buried beneath the wrong tombstones.", 
+  "Benson and Stabler investigate the murder of a young woman who is initially believed to be a prostitute and the latest in a long line of victims. “I hate this goddamned city,” Benson says to Stabler, dabbing her eyes with a deli napkin. Stabler rolls his eyes and starts the car.", 
+  "The old DA irons her hair before court, the way her mother showed her. After she loses the case, she packs three changes of clothes in a suitcase and gets into her car. She calls Benson from her cell phone. “Sorry, buddy. Hitting the road. Not sure when I’ll be back.” Benson pleads with her to stay. The old DA tosses the cell phone onto the road and pulls away from the curb. A passing taxi reduces it to splinters.", 
+  "", 
+  "", 
+  "", 
+  "", 
+  "", 
+};
+String[] eptitle = {
+  "Payback", 
+  "A Single Life", 
+  "Or Just Look Like One", 
+  "Hysteria", 
+  "Wanderlust", 
+};
+int[] slideCount = {
+  1, 
+  2, 
+  3, 
+  4, 
+  5, 
+  6, 
+  7, 
+  8, 
+  9, 
+  10, 
+  11, 
+  12, 
+  13, 
+  14, 
+  15, 
+  16, 
+  17, 
+  18, 
+  19, 
+  20, 
+  21, 
+  22, 
+  23, 
+  24, 
+  25, 
+  26, 
+  27, 
+  28, 
+  29, 
+  30, 
+  31, 
+  32, 
+  33, 
+  34, 
+  35, 
+  36, 
+  37, 
+  38, 
+  39, 
+  40, 
+  41, 
+  42, 
+  43, 
+  44, 
+  45, 
+  46, 
+  47, 
+  48, 
+  49, 
+  50, 
+  51, 
+  52, 
+  53, 
+  54, 
+  55, 
+  56, 
+  57, 
+  58, 
+  59, 
+  60, 
+  61, 
+  62, 
+  63, 
+  64, 
+  65, 
+  66, 
+  67, 
+  68, 
+  69, 
+  70, 
+  71, 
+  72, 
+  73, 
+  74, 
+  75, 
+  76, 
+  77, 
+  78, 
+  79, 
+  80, 
+  81, 
+  82, 
+  83, 
+  84, 
+  85, 
+  86, 
+  87, 
+  88, 
+  89, 
+  90, 
+  91, 
+  92, 
+  93, 
+  94, 
+  95, 
+  96, 
+  97, 
+  98, 
+  99, 
+  100, 
+  101, 
+  102, 
+  103, 
+  104, 
+  105, 
+  106, 
+  107, 
+  108, 
+  109, 
+  110, 
+  111, 
+  112, 
+  113, 
+  114, 
+  115, 
+  116, 
+  117, 
+  118, 
+  119, 
+  120, 
+  121, 
+  122, 
+  123, 
+  124, 
+  125, 
+  126, 
+  127, 
+  128, 
+  129, 
+  130, 
+  131, 
+  132, 
+  133, 
+  134, 
+  135, 
+  136, 
+  137, 
+  138, 
+  139, 
+  140, 
+  141, 
+  142, 
+  143, 
+  144, 
+  145, 
+  146, 
+  147, 
+  148, 
+  149, 
+  150, 
+  151, 
+  152, 
+  153, 
+  154, 
+  155, 
+  156, 
+  157, 
+  158, 
+  159, 
+  160, 
+  161, 
+  162, 
+  163, 
+  164, 
+  165, 
+  166, 
+  167, 
+  168, 
+  169, 
+  170, 
+  171, 
+  172, 
+  173, 
+  174, 
+  175, 
+  176, 
+  177, 
+  178, 
+  179, 
+  180, 
+  181, 
+  182, 
+  183, 
+  184, 
+  185, 
+  186, 
+  187, 
+  188, 
+  189, 
+  190, 
+  191, 
+  192, 
+  193, 
+  194, 
+  195, 
+  196, 
+  197, 
+  198, 
+  199, 
+  200, 
+  201, 
+  202, 
+  203, 
+  204, 
+  205, 
+  206, 
+  207, 
+  208, 
+  209, 
+  210, 
+  211, 
+  212, 
+  213, 
+  214, 
+  215, 
+  216, 
+  217, 
+  218, 
+  219, 
+  220, 
+  221, 
+  222, 
+  223, 
+  224, 
+  225, 
+  226, 
+  227, 
+  228, 
+  229, 
+  230, 
+  231, 
+  232, 
+  233, 
+  234, 
+  235, 
+  236, 
+  237, 
+  238, 
+  239, 
+  240, 
+  241, 
+  242, 
+  243, 
+  244, 
+  245, 
+  246, 
+  247, 
+  248, 
+  249, 
+  250, 
+  251, 
+  252, 
+  253, 
+  254, 
+  255, 
+  256, 
+  257, 
+  258, 
+  259, 
+  260, 
+  261, 
+  262, 
+  263, 
+  264, 
+  265, 
+  266, 
+  267, 
+  268, 
+  269, 
+  270, 
+  271, 
+  272, 
+  273, 
+  274, 
+  275
+};
+// will fill in later
+
+class Slide {
+
+  Slide() {
+  }
+
+  void display(int slidenumber) {
+
+      PFont courier;
+      courier = createFont("courierPrime.ttf", 12);
+      textFont(courier);
+    
+    
+    fill(255);
+    noStroke();
+    rect(110, 110, 570, 480);
+    rect(110, 70, 570, 480);
+    fill(0);
+    textSize(100);
+    textAlign(LEFT);
+    textSize(20);
+    //text(storytext[slidenumber], 110, 130, 570, 380);
+    typewriteText(storytext[slidenumber]);
+    
+      PFont courierB;
+      courierB = createFont("Courier Prime Bold.ttf", 56);
+      textFont(courierB);
+    textSize(40);
+    text(eptitle[slidenumber], 110, 70, 570, 380);
+    //typewriter(eptitle[slidenumber]);
+  }
+
+  void update() {
+    color(255);
+
+    textSize(100);
+    textAlign(CENTER);
+    text(storytext[slidenumber], 110, 110, 570, 280);
+  }
+
+  void typewriter(String text) {
+    String msg = "";
+    int length = text.length();
+    text(msg, 110, 130, 570, 380);
+    for (int i = 0; i<length ;i++){
+
+    msg += text.charAt(i);
+  // print(msg + "  ");
+   //delay(10);
+    text(msg, 110, 130, 570, 380);
+
+    
+    }
+
+}
+void typewriteText(String text){
+  if (counter < text.length())
+    counter++;
+  text(text.substring(0, counter), 0, 40, width, height);
+  }
+}
